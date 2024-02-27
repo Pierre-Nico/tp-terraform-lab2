@@ -1,0 +1,7 @@
+# Ignorer tous les fichiers
+*
+
+# Sauf les fichiers suivants
+!main.tf
+!variables.tf
+!nginx.conf
