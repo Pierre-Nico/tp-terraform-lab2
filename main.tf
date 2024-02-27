@@ -25,4 +25,9 @@ resource "docker_container" "nginx" {
     internal = 80
     external = var.start_port + count.index
   }
+  volumes {
+    container_path = "/etc/nginx/nginx.conf"
+    host_path      = "/home/terraform_docker_nginx/nginx.conf" # Chemin local vers votre fichier nginx.conf personnalisé
+    read_only      = true
+  }
 }
